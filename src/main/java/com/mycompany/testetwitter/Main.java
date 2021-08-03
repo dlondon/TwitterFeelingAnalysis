@@ -33,10 +33,10 @@ public class Main {
 
         ConfigurationBuilder cb = new ConfigurationBuilder();
         cb.setDebugEnabled(true)
-                .setOAuthConsumerKey("GPnTGUI7JxqI68y5iOj0nWujR")
-                .setOAuthConsumerSecret("AfIM3fDSpDUe6lPoOFsLLryrrFYnkNu44UuPxrA8UkY6WjyXsi")
-                .setOAuthAccessToken("1284604293102829573-KmjrhjyvyFzvZHzsfajI5tM8EhaXYr")
-                .setOAuthAccessTokenSecret("OLyiBkDTvJvCiS4hHSibYYKqp0J3cMDYd0KdWWI5q154j");
+                .setOAuthConsumerKey("Key")
+                .setOAuthConsumerSecret("Consumersecret")
+                .setOAuthAccessToken("token")
+                .setOAuthAccessTokenSecret("AccessTokenSecret");
         TwitterFactory tf = new TwitterFactory(cb.build());
         Twitter twitter = tf.getInstance();
 
@@ -47,8 +47,7 @@ public class Main {
         QueryResult result = twitter.search(query);
 
         
-        
-        /*
+       
         
         int num_neutral = 0;
         int num_negative = 0;
@@ -96,7 +95,7 @@ public class Main {
         for (Status status : result.getTweets())
         {
             System.out.println("@" + status.getUser().getScreenName() + ":" + status.getText());
-        }*/
+        }
         
         
         
@@ -110,7 +109,7 @@ public class Main {
             System.out.println("Hora do tweet: "+result.getTweets().get(i).getCreatedAt());
             System.out.println("Texto: "+result.getTweets().get(i).getText());
             System.out.println("==========================================");
-        }
+        }*/
        
         
         
